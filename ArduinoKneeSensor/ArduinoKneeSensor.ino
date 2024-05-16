@@ -51,8 +51,6 @@ void loop() {
 
   //updates the cloud
   ArduinoCloud.update();
-
- 
   
   //arduino nano angle
   //checks accelerometer and gryo
@@ -104,9 +102,7 @@ void loop() {
       else{
       angle = 180 + acos(((-y)/9.81)) * 57.2957795131;
       }
-
     }
-
     else{
     //Serial.println(y);
       if(x>0){
@@ -115,11 +111,8 @@ void loop() {
       else{
       angle = 180 + acos(((-y)/9.71)) * 57.2957795131;
       }
-
     }
-
   }
-
 
   FangleA = Nano_angle - angle + 90;
   
